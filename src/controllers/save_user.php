@@ -8,7 +8,7 @@ $userData = [];
 if(count($_POST) === 0 && isset($_GET['update'])) {
     $user = User::getOne(['id' => $_GET['update']]);
     $userData = $user->getValues();
-    $userData['password'] = null;
+    $userData['senha'] = null;
 } elseif(count($_POST) > 0) {
     try {
         $dbUser = new User($_POST);
@@ -18,6 +18,7 @@ if(count($_POST) === 0 && isset($_GET['update'])) {
             header('Location: users.php');
             exit();
         } else {
+            // $dbUser->senha
             $dbUser->insert();
             addSuccessMsg('Usuário cadastrado com sucesso!');
         }

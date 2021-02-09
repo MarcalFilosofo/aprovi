@@ -39,7 +39,7 @@
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="inputSenha">senha</label>
-            <input name="senha" type="senha" 
+            <input name="senha" type="password" 
                 class="form-control <?= $errors['senha'] ? 'is-invalid' : '' ?>"
                 id="inputSenha" placeholder="Digite sua senha">
             <div class="invalid-feedback">
@@ -48,7 +48,7 @@
         </div>
         <div class="form-group col-md-6">
             <label for="inputSenhaConfirmar">Confirme a senha</label>
-            <input name="senhaConfirme" type="senha" 
+            <input name="senhaConfirme" type="password" 
                 class="form-control <?= $errors['senhaConfirme'] ? 'is-invalid' : '' ?>"
                 id="inputSenhaConfirmar" placeholder="Confirme sua senha">
             <div class="invalid-feedback">
