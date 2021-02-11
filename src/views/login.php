@@ -30,7 +30,7 @@
                 </div>
                 <div class="form-group">
                     <label for="password">Senha</label>
-                    <input type="password" id="password" name="password"
+                    <input type="password" id="password" name="senha"
                         class="form-control <?= $errors['senha'] ? 'is-invalid' : '' ?>"
                         placeholder="Informe a senha">
                     <div class="invalid-feedback">

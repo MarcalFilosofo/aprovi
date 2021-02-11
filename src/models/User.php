@@ -23,6 +23,7 @@ class User extends Model {
         $this->validate();
         $this->is_admin = 0;
         $this->senha = password_hash($this->senha, PASSWORD_DEFAULT);
+        // echo $this->senha;
        
         return parent::insert();
     }
