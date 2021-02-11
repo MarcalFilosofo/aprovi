@@ -31,14 +31,6 @@ class Login extends Model {
                 throw new AppException('Usuário está desligado da empresa.');
             }
 
-
-   
-
-            // echo $this->password, "<br>";
-            // $this->senha = password_hash($this->senha, PASSWORD_DEFAULT);
-            // echo $this->senha, "<br>";
-            // echo $user->password, "<br>";
-            // var_dump(password_verify('a',  "a")) ;
             echo $user->senha;
             var_dump(password_verify($this->senha, $user->senha));
             if(password_verify($this->senha, $user->senha)) {

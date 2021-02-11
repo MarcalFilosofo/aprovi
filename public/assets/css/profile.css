@@ -1,0 +1,61 @@
+:root{
+    /*Cores*/
+    --bg-black: #000000;
+    --bg-gray: #212121;
+    --bg-light-gray: #484848;
+    
+    --bg-yellow: #ffff00;
+    --bg-dark-yellow: #c7b800;
+    --bg-green:  #aeea00;
+
+    /*Métricas*/
+    --logo-height: 100px;
+    --header-height: 100px;
+    --menu-top-height: 70px;
+    --footer-height: 40px;
+    --article-height: 500px;
+    --nav-height: 70px;
+    --aside-width: 500px;
+
+
+    --shadow:
+        0 2px 23px 0 rgba(0, 0, 0, 0.1),
+        0 2px 49px 0 rgba(0, 0, 0, 0.06);
+
+}
+
+body{
+    display: grid;
+    grid-template-columns: var(--aside-width) 1fr;
+    grid-template-rows: var(--header-height) 1fr var(--footer-height);
+    grid-template-areas:
+        "nav nav"
+        "aside main"
+        "aside footer"
+    ;
+    height: 100vh;
+    margin: 0;
+}
+
+aside.aside{
+    grid-area: aside;
+    background-color: #aaaaaa;
+}
+
+main.main{
+    grid-area: main;
+    background-color: #fc7100;
+
+}
+
+footer.footer{
+    grid-area: footer;
+    background-color: #ffaabb;
+
+}
+
+nav.nav{
+    grid-area: nav;
+    background-color: #112233;
+
+}

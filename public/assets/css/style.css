@@ -45,6 +45,7 @@ nav.nav{
     height: var(--nav-height);
 }
 
+
 img.wallpaper{
     width: 100%;
 }
@@ -56,9 +57,9 @@ ul{
     align-items: center;
 } */
 
- a >img.logo{
-    width: 1em;
-}
+ /* a >img#logo{
+    width: 200px;
+} */
 
 a.nav-item{
     text-decoration: none;
