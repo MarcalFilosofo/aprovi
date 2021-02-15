@@ -40,7 +40,7 @@ body{
 nav.nav{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-around; 
     align-items: center;
     height: var(--nav-height);
 }
@@ -57,9 +57,9 @@ ul{
     align-items: center;
 } */
 
- /* a >img#logo{
-    width: 200px;
-} */
+ a.nav-item >img#logo{
+    width: 50px; 
+}
 
 a.nav-item{
     text-decoration: none;

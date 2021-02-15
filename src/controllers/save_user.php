@@ -1,6 +1,6 @@
 <?php
 // session_start();
-// requireValidSession(true);
+// requireValidSession();
 
 $exception = null;
 $userData = [];
@@ -18,7 +18,6 @@ if(count($_POST) === 0 && isset($_GET['update'])) {
             header('Location: users.php');
             exit();
         } else {
-            // $dbUser->senha
             $dbUser->insert();
             addSuccessMsg('Usuário cadastrado com sucesso!');
         }

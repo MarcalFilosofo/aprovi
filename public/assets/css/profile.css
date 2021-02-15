@@ -2,10 +2,10 @@
     /*Cores*/
     --bg-black: #000000;
     --bg-gray: #212121;
-    --bg-light-gray: #484848;
+    --bg-light-gray: #e9e9e9;
     
     --bg-yellow: #ffff00;
-    --bg-dark-yellow: #c7b800;
+    --bg-dark-yellow: #ffab00;
     --bg-green:  #aeea00;
 
     /*Métricas*/
@@ -26,8 +26,8 @@
 
 body{
     display: grid;
-    grid-template-columns: var(--aside-width) 1fr;
-    grid-template-rows: var(--header-height) 1fr var(--footer-height);
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 80px 1fr 64px;
     grid-template-areas:
         "nav nav"
         "aside main"
@@ -37,25 +37,105 @@ body{
     margin: 0;
 }
 
+
+div.logo{
+    grid-area: logo;
+    background-color: var(--bg-gray);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow);
+}
+
+img#logo{
+    width: 50px;
+    height: 50px;
+}
+
 aside.aside{
     grid-area: aside;
-    background-color: #aaaaaa;
+    background-color: var(--bg-dark-yellow);
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
 }
 
-main.main{
-    grid-area: main;
-    background-color: #fc7100;
-
+aside.aside ul{
+    list-style: none;
 }
 
-footer.footer{
-    grid-area: footer;
-    background-color: #ffaabb;
-
+aside.aside ul li a{
+    text-decoration: none;
 }
 
 nav.nav{
     grid-area: nav;
-    background-color: #112233;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--bg-gray);
+    box-shadow: var(--shadow);
+}
+
+a.nav-item{
+    text-decoration: none;
+    color: white;
+    /* margin-bottom: 20px; */
+}
+
+a.aside-item{
+    text-decoration: none;
+    color: white;
+}
+
+li{
+    margin-bottom: 20px;
+}
+
+main.main{
+    grid-area: main;
+}
+
+.profile{
+    background-color: var(--bg-light-gray);
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+    font-size: 1.5rem;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.profile-header{
+    background-color: #b5b5b5;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.profile-main{
+    margin-left: 20px;
+}
+
+.profile-footer{
+    height: 20px;
+    background-color: #b5b5b5
+}
+
+
+footer.footer{
+    grid-area: footer;
+    background-color: var(--bg-gray);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    color: white;
 
 }

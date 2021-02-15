@@ -42,10 +42,11 @@ function loadProfileView($viewName, $params = array()) {
         }
     }
 
+    // require_once(TEMPLATE_PATH . "/logo.php");
     require_once(TEMPLATE_PATH . "/headerProfile.php");
     require_once(TEMPLATE_PATH . "/left.php");
     require_once(VIEW_PATH . "/{$viewName}.php");
-    require_once(TEMPLATE_PATH . "/footer.php");
+    require_once(TEMPLATE_PATH . "/footerProfile.php");
 }
 
 function renderTitle($title, $subtitle, $icon = null) {

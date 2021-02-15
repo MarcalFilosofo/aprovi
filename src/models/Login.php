@@ -5,17 +5,14 @@ class Login extends Model {
         $errors = [];
       
         if(!$this->email) {
-     
             $errors['email'] = 'E-mail é um campo obrigatório.';
         }
 
         if(!$this->senha) {
-
             $errors['senha'] = 'Por favor, informe a senha.';
         }
 
         if(count($errors) > 0) {
- 
             throw new ValidationException($errors);
         }
     }
@@ -31,8 +28,6 @@ class Login extends Model {
                 throw new AppException('Usuário está desligado da empresa.');
             }
 
-            echo $user->senha;
-            var_dump(password_verify($this->senha, $user->senha));
             if(password_verify($this->senha, $user->senha)) {
            
                 return $user;

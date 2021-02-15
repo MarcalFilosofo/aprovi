@@ -8,20 +8,14 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/icofont.min.css">
     <link rel="stylesheet" href="assets/css/profile.css">
-    
+    <link rel="sortcut icon" href="assets/img/APROVI.png" type="image/x-icon" />
     <title>APROVI</title>
 </head>
 <body>
     <nav class="nav">
-        <a class="nav-item" href="landing_page.php#home" id="logo"><img class="logo" width="100px" src="assets/img/aprovi.png" alt=""></a>
-
-        <a class="nav-item" href="cadastro.php" >Cadastro</a>
-
-        <a class="nav-item" href="artigos.php" >Artigos</a>
-
-        <a class="nav-item" href="login.php" >Login</a>  
-        
-        
+        <a href="logout.php">
+            <img src="assets/img/APROVI.png" id="logo" alt="">
+        </a>
     </nav>
     
     
