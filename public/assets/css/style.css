@@ -4,9 +4,9 @@
     --bg-gray: #212121;
     --bg-light-gray: #484848;
     
-    --bg-yellow: #ffff00;
+    --bg-yellow: #ffab00;
     --bg-dark-yellow: #c7b800;
-    --bg-green:  #aeea00;
+    --bg-green:  #4ca900;
 
     /*Métricas*/
     --logo-height: 100px;
@@ -170,19 +170,25 @@ footer.footer{
 }
 
 div.redes{
-    
-    /* font-size: 2.0em; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 1.5rem;
     background-color: var(--bg-yellow);
 
 }
 
-div.cadastro{
-   
+.data{
+    color:white;
+    background-color: var(--bg-gray);
+    height: 200px;
+    font-size: 1.5rem;
+    font-weight: 300;
+
+    padding: 20px
 }
 
-div.enviar{
-
-}
 
 button.enviar{  
     font-size: 1em;
@@ -190,4 +196,16 @@ button.enviar{
 
 .icon-redes{
     width: 50px;
+}
+
+main.article-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.card{
+    width: 18rem;
+    
 }

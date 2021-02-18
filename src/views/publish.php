@@ -1,7 +1,8 @@
 <main class="main p-5">
 <?php
     include(TEMPLATE_PATH . "/messages.php");
-
+    
+    // 0000-00-00 00:00:00
 ?>
 <form action="#" method="post" enctype="multipart/form-data">
     <div class="form">
@@ -17,13 +18,6 @@
             <input name="subtitle" type="text" class="form-control <?= $errors['subtitle'] ? 'is-invalid' : '' ?>" id="subtitle" placeholder="Subtítulo...">
             <div class="invalid-feedback">
                 <?= $errors['subtitle'] ?>
-            </div>
-        </div>
-        <div class="custom-file">
-            <input name="img" type="file" class="custom-file-input <?= $errors['img'] ? 'is-invalid' : '' ?> " id="customFile">
-            <label class="custom-file-label" for="customFile">Escolha uma foto</label>
-            <div class="invalid-feedback mb-5">
-                <?= $errors['img'] ?>
             </div>
         </div>
         <div class="form-group mt-5">

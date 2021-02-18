@@ -14,7 +14,7 @@
                 </a>
             </li>
             <li>
-                <a href="" class="aside-item">
+                <a href="article_list.php" class="aside-item">
                     <i class="icofont-paper mr-1"></i>
                     Artigos
                 </a>

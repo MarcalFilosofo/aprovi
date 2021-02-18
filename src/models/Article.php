@@ -6,17 +6,33 @@ class Article extends Model{
         'title',
         'subtitle',
         'conteudo',
-        'img'
+
     ];
 
+
+    public static function getLastet($start = 0){
+        // SELECT * from article where id > ((SELECT MAX(id) FROM article) - 10) ORDER BY id DESC
+        $result = Database::getResultFromQuery("
+            SELECT * from article ORDER BY id desc limit $start,10
+            
+        ");
+
+        $topArticles = [];
+        if($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                array_push($topArticles, $row);
+            }
+        }
+
+        return $topArticles;
+    } 
+
     public function insert() {
-       
         $this->validate();
         return parent::insert();
     }
 
     public function update() {
-
         $this->validate();
         return parent::update();
     }
@@ -36,9 +52,7 @@ class Article extends Model{
 
             $errors['conteudo'] = "Escrever o artigo é obrigatório";
         }
-        if(!$_FILES){
-            $errors['img'] = "É obrigatório colocar uma imagem";
-        }
+    
         if(count($errors) > 0) {
     
             throw new ValidationException($errors);

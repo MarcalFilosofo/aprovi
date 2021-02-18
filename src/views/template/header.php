@@ -18,7 +18,7 @@
             src="assets/img/APROVI.png" alt="">
         </a>
         <a class="nav-item" href="cadastro.php" >Cadastro</a>
-        <a class="nav-item" href="artigos.php" >Artigos</a>
+        <a class="nav-item" href="article_list.php" >Artigos</a>
         <a class="nav-item" href="login.php" >Login</a>  
     </nav>
     
