@@ -1,2 +1,5 @@
 <?php
-    loadTemplateView('landing_page');
+    $article = Article::getLastet();
+
+
+    loadTemplateView('landing_page',['article' => $article]);

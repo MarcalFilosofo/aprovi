@@ -8,7 +8,7 @@ $articleData = [];
 if(count($_POST) === 0 && isset($_GET['update'])) {
     $article = Article::getOne(['id' => $_GET['update']]);
     $articleData = $article->getValues();
-    // $articleData['password'] = null;
+
 } elseif(count($_POST) > 0) {
     try {
         $dbArticle = new Article($_POST);

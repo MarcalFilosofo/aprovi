@@ -22,9 +22,23 @@
         <div class="container-fluid">
             <div class="row">
                 <?php
-                    renderArticle('Vigilantes', 'Os vigilantes são muito importantes, pois eles cuidam do patrimônio público', 'assets/img/default.jpg');
-                    renderArticle('Vigilantes', 'Os vigilantes são muito importantes, pois eles cuidam do patrimônio público', 'assets/img/default.jpg');
-                    renderArticle('Vigilantes', 'Os vigilantes são muito importantes, pois eles cuidam do patrimônio público', 'assets/img/default.jpg');
+                    $i = 0;
+                    foreach($article as $a){
+                        ?>
+                        <div class="card col-8 col-md-3 mx-auto my-4" style="width: 18rem;">
+                            <img class="card-img-top" src='assets/img/upload/<?= $a['img_path'] ? $a['img_path'] : 'default.jpg'?>' alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $a['title'] ?></h5>
+                                <p class="card-text"><?= $a['subtitle'] ?></p>
+                                <a href="render_article.php?aprovi=<?= $a['id'] ?>" class="btn btn-primary">Ver artigo</a>
+                            </div>
+                        </div>
+                        <?php
+                        $i++;
+                        if($i > 2){
+                            break;
+                        }
+                    }
                 ?>
             </div>
         </div>

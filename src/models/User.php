@@ -38,13 +38,15 @@ class User extends Model {
 
     private function validate() {
         $errors = [];
-    
+        $validEnterprise = [1, 2, 3, 4, 5];
 
         if(!$this->nome) {
             $errors['nome'] = 'Nome é um campo abrigatório.';
         }
         
         if(!$this->empresa) {
+            $errors['empresa'] = 'Empresa é um campo abrigatório.';
+        }elseif(!in_array($this->empresa, $validEnterprise)){
             $errors['empresa'] = 'Empresa é um campo abrigatório.';
         }
 
@@ -86,7 +88,6 @@ class User extends Model {
         }
 
         if(!$this->termo) {
-            
             $errors['termo'] = 'É obrigatório aceitar os termos para se cadastrar na APROVI';
         }
 

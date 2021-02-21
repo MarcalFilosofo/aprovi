@@ -1,14 +1,17 @@
 <main class="main p-5">
 <?php
     include(TEMPLATE_PATH . "/messages.php");
-    
-    // 0000-00-00 00:00:00
+
 ?>
+<h1>Publicar</h1>
 <form action="#" method="post" enctype="multipart/form-data">
     <div class="form">
         <div class="form-group">
             <label for="title">Título</label>
-            <input name="title" type="text" class="form-control  <?= $errors['title'] ? 'is-invalid' : '' ?>" id="title" placeholder="Título...">
+            <input name="title" type="text" class="form-control  
+                <?= $errors['title'] ? 'is-invalid' : '' ?>" 
+                id="title" placeholder="Título..."
+                value="<?=$title?>">
             <div class="invalid-feedback">
                 <?= $errors['title'] ?>
             </div>
@@ -16,14 +19,19 @@
         
         <div class="form-group">
             <label for="subtitle">Subtítulo</label>
-            <input name="subtitle" type="text" class="form-control <?= $errors['subtitle'] ? 'is-invalid' : '' ?>" id="subtitle" placeholder="Subtítulo...">
+            <input name="subtitle" type="text" class="form-control 
+                <?= $errors['subtitle'] ? 'is-invalid' : '' ?>" 
+                id="subtitle" placeholder="Subtítulo..."
+                value="<?=$subtitle?>">
             <div class="invalid-feedback">
                 <?= $errors['subtitle'] ?>
             </div>
         </div>
 
         <div class="custom-file">
-            <input name="file" type="file" class="custom-file-input <?= $errors['file'] ? 'is-invalid' : '' ?>" id="file" placeholder="Faça upload de um arquivo de imagem">
+            <input name="file" type="file" class="custom-file-input 
+                <?= $errors['file'] ? 'is-invalid' : '' ?>" 
+                id="file" placeholder="Faça upload de um arquivo de imagem">
             <label class="custom-file-label" for="file">Arquivo de imagem</label>
             <div class="invalid-feedback">
                 <?= $errors['file'] ?>
@@ -33,7 +41,10 @@
 
         <div class="form-group mt-5">
             <label for="contentTitle">Conteúdo</label>
-            <textarea name="conteudo" class="form-control <?= $errors['conteudo'] ? 'is-invalid' : '' ?>" id="contentTitle" rows="10"></textarea>
+            <textarea name="conteudo" class="form-control 
+            <?= $errors['conteudo'] ? 'is-invalid' : '' ?>" 
+            id="contentTitle" rows="10"
+            value=""><?=$conteudo?></textarea>
             <div class="invalid-feedback">
                 <?= $errors['conteudo'] ?>
             </div>
