@@ -54,9 +54,13 @@ class User extends Model {
             $errors['email'] = 'Email inválido.';
         }
 
+
         if(!$this->senha) {
-            // $this->senha = md5($this->senha);
             $errors['senha'] = 'Senha é um campo abrigatório.';
+        }elseif((strlen($this->senha) < 8)){
+            $errors['senha'] = 'A senha deve ter no mínimo 8 caracteres';
+        }elseif(strlen($this->senha) > 16){
+            $errors['senha'] = 'A senha deve ter no máximo 16 caracteres';
         }
 
         if(!$this->senhaConfirme) {
@@ -73,10 +77,11 @@ class User extends Model {
 
         if(!$this->cpf) {
             $errors['cpf'] = 'CPF é um campo obrigatório.';
+        }elseif(preg_match('([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})', $this->cpf)){
+            $errors['cpf'] = 'CPF não é válido.';
         }
 
         if(!$this->cidade) {
-            
             $errors['cidade'] = 'Cidade é um campo obrigatório.';
         }
 

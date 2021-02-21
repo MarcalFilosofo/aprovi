@@ -1,10 +1,10 @@
+
 <?php
 session_start();
 requireValidSession();
 
 $exception = null;
 $articleData = [];
-
 if(count($_POST) === 0 && isset($_GET['update'])) {
     $article = Article::getOne(['id' => $_GET['update']]);
     $articleData = $article->getValues();

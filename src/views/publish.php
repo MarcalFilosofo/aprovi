@@ -13,6 +13,7 @@
                 <?= $errors['title'] ?>
             </div>
         </div>
+        
         <div class="form-group">
             <label for="subtitle">Subtítulo</label>
             <input name="subtitle" type="text" class="form-control <?= $errors['subtitle'] ? 'is-invalid' : '' ?>" id="subtitle" placeholder="Subtítulo...">
@@ -20,6 +21,16 @@
                 <?= $errors['subtitle'] ?>
             </div>
         </div>
+
+        <div class="custom-file">
+            <input name="file" type="file" class="custom-file-input <?= $errors['file'] ? 'is-invalid' : '' ?>" id="file" placeholder="Faça upload de um arquivo de imagem">
+            <label class="custom-file-label" for="file">Arquivo de imagem</label>
+            <div class="invalid-feedback">
+                <?= $errors['file'] ?>
+            </div>
+        </div>
+
+
         <div class="form-group mt-5">
             <label for="contentTitle">Conteúdo</label>
             <textarea name="conteudo" class="form-control <?= $errors['conteudo'] ? 'is-invalid' : '' ?>" id="contentTitle" rows="10"></textarea>

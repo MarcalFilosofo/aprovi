@@ -60,7 +60,7 @@
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="cpf">CPF</label>
-            <input name="cpf" type="number" class="form-control <?= $errors['cpf'] ? 'is-invalid' : '' ?>" id="cpf" placeholder="Digite seu CPF" pattern="([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})">
+            <input name="cpf" type="number" class="form-control <?= $errors['cpf'] ? 'is-invalid' : '' ?>" id="cpf" placeholder="Digite seu CPF" pattern="">
             <div class="invalid-feedback">
                 <?= $errors['cpf'] ?>
             </div>

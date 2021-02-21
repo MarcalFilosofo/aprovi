@@ -19,11 +19,18 @@
                     Artigos
                 </a>
             </li>
+            
             <?php if ($_SESSION['user']->is_admin):?>
                 <li>
                     <a href="publish.php" class="aside-item">
                         <i class="icofont-pencil-alt-2 mr-1"></i>
                         Publicar
+                    </a>
+                </li>
+                <li>
+                    <a href="publish.php" class="aside-item">
+                        <i class="icofont-email"></i>
+                        Enviar e-mail
                     </a>
                 </li>
             <?php endif ?>
