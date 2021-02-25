@@ -39,6 +39,9 @@ class User extends Model {
     private function validate() {
         $errors = [];
         $validEnterprise = [1, 2, 3, 4, 5];
+        $user = User::getOne(['email' => $this->email]);
+        $usercpf = User::getOne(['cpf' => $this->cpf]);
+        
 
         if(!$this->nome) {
             $errors['nome'] = 'Nome é um campo abrigatório.';
@@ -54,6 +57,8 @@ class User extends Model {
             $errors['email'] = 'Email é um campo abrigatório.';
         } elseif(!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
             $errors['email'] = 'Email inválido.';
+        }elseif($user->email == $this->email){
+            $errors['email'] = 'E-mail já cadastrado';
         }
 
 
@@ -79,8 +84,10 @@ class User extends Model {
 
         if(!$this->cpf) {
             $errors['cpf'] = 'CPF é um campo obrigatório.';
-        }elseif(preg_match('([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})', $this->cpf)){
+        }elseif(!validadeCPF($this->cpf)){
             $errors['cpf'] = 'CPF não é válido.';
+        }elseif($usercpf->cpf == $this->cpf ) {
+            $errors['cpf'] = 'CPF já cadastrado';
         }
 
         if(!$this->cidade) {

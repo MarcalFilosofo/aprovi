@@ -40,13 +40,33 @@
 
 
         <div class="form-group mt-5">
-            <label for="contentTitle">Conteúdo</label>
+            <label for="contentTitle">Início</label>
             <textarea name="conteudo" class="form-control 
             <?= $errors['conteudo'] ? 'is-invalid' : '' ?>" 
             id="contentTitle" rows="10"
             value=""><?=$conteudo?></textarea>
             <div class="invalid-feedback">
                 <?= $errors['conteudo'] ?>
+            </div>
+        </div>
+        <div class="form-group mt-5">
+            <label for="contentTitle">Desenvolvimento</label>
+            <textarea name="desen" class="form-control 
+            <?= $errors['desen'] ? 'is-invalid' : '' ?>" 
+            id="contentTitle" rows="10"
+            value=""><?=$desen?></textarea>
+            <div class="invalid-feedback">
+                <?= $errors['desen'] ?>
+            </div>
+        </div>
+        <div class="form-group mt-5">
+            <label for="contentTitle">Conclusão</label>
+            <textarea name="conclusion" class="form-control 
+            <?= $errors['conclusion'] ? 'is-invalid' : '' ?>" 
+            id="contentTitle" rows="10"
+            value=""><?=$conclusion?></textarea>
+            <div class="invalid-feedback">
+                <?= $errors['conclusion'] ?>
             </div>
         </div>
         <button type="submit" class="btn btn-success">Publicar</button>

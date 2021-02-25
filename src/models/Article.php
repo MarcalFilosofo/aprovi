@@ -6,6 +6,8 @@ class Article extends Model{
         'title',
         'subtitle',
         'conteudo',
+        'desen',
+        'conclusion',
         'img_path'
     ];
 

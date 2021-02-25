@@ -24,9 +24,10 @@ if(count($_POST) === 0 && isset($_GET['update'])) {
         $_POST = [];
     } catch(Exception $e) {
         $exception = $e;
+        
     } finally {
         $userData = $_POST;
     }
 }
-
+var_dump($exception)
 loadTemplateView('cadastro', $userData + ['exception' => $exception]);
